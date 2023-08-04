@@ -39,6 +39,10 @@ dependencies:
   multi_image_picker_view: ^0.0.17
   sliding_up_panel: ^2.0.0+1
   email_validator: ^2.1.17
+  google_maps_flutter: ^2.4.0
+  searchfield: ^0.8.3
+  animated_radial_menu: ^0.0.1
+  lottie: ^2.5.0
 
 dev_dependencies:
   flutter_test:

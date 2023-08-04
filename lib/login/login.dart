@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:email_validator/email_validator.dart';
 
+import '../map/gmap.dart';
+
 class Login extends StatefulWidget {
   const Login({super.key});
 
@@ -99,6 +101,16 @@ class _LoginState extends State<Login> {
               child: const Text("Create a account",
                   style: TextStyle(color: Colors.white)),
               onPressed: () {}),
+          ElevatedButton(
+              child: const Text("Google Map",
+                  style: TextStyle(color: Colors.white)),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Map(),
+                    ));
+              }),
         ]),
       ),
     );

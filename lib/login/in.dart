@@ -22,21 +22,23 @@ class _InState extends State<In> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => TakeImage(),
+                    builder: (context) => const TakeImage(),
                   ));
             },
-            child: const Text('Next')),
+            child: const Text('')),
       ),
     );
   }
 
   _panel() {
-    return const Center(
-      child: Row(
-        children: [
-          Text('abc'),
-        ],
-      ),
+    return Column(
+      children: [
+        Row(
+          children: [
+            Text('abc', style: TextStyle(fontSize: 25)),
+          ],
+        ),
+      ],
     );
   }
 }
