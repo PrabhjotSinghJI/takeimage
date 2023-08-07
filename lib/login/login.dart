@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:email_validator/email_validator.dart';
+import 'package:takeimage/login/create.dart';
 
 import '../map/gmap.dart';
 
@@ -20,6 +21,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey,
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           SizedBox(
@@ -100,7 +102,13 @@ class _LoginState extends State<Login> {
           ElevatedButton(
               child: const Text("Create a account",
                   style: TextStyle(color: Colors.white)),
-              onPressed: () {}),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => create(),
+                    ));
+              }),
           ElevatedButton(
               child: const Text("Google Map",
                   style: TextStyle(color: Colors.white)),
@@ -108,7 +116,7 @@ class _LoginState extends State<Login> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Map(),
+                      builder: (context) => MyApp(),
                     ));
               }),
         ]),

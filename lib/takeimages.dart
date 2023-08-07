@@ -15,45 +15,47 @@ class _TakeImageState extends State<TakeImage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white30,
         body: Center(
-      child: TextButton(
-        onPressed: () {
-          showDialog(
-              context: context,
-              builder: (ctx) => Platform.isIOS
-                  ? CupertinoAlertDialog(
-                      title: Text('Logout'),
-                      content: Text('Would you like to LogOut'),
-                      actions: [
-                        CupertinoButton(onPressed: () {}, child: Text("Login")),
-                        CupertinoButton(
-                            onPressed: () {}, child: Text("Login Out"))
-                      ],
-                    )
-                  : AlertDialog(
-                      title: Text('Logout'),
-                      content: Text('Would you like to Logout'),
-                      actions: [
-                        TextButton(
-                            onPressed: () {
-                              Navigator.pop(ctx);
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => Login(),
-                                  ));
-                            },
-                            child: Text("yes")),
-                        TextButton(
-                            onPressed: () {
-                              Navigator.pop(ctx);
-                            },
-                            child: Text("no"))
-                      ],
-                    ));
-        },
-        child: Text('Login / Logout'),
-      ),
-    ));
+          child: TextButton(
+            onPressed: () {
+              showDialog(
+                  context: context,
+                  builder: (ctx) => Platform.isIOS
+                      ? CupertinoAlertDialog(
+                          title: Text('Logout'),
+                          content: Text('Would you like to LogOut'),
+                          actions: [
+                            CupertinoButton(
+                                onPressed: () {}, child: Text("Login")),
+                            CupertinoButton(
+                                onPressed: () {}, child: Text("Login Out"))
+                          ],
+                        )
+                      : AlertDialog(
+                          title: Text('Logout'),
+                          content: Text('Would you like to Logout'),
+                          actions: [
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.pop(ctx);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => Login(),
+                                      ));
+                                },
+                                child: Text("yes")),
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.pop(ctx);
+                                },
+                                child: Text("no"))
+                          ],
+                        ));
+            },
+            child: Text('Login / Logout', style: TextStyle(fontSize: 20)),
+          ),
+        ));
   }
 }

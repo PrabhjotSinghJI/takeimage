@@ -31,11 +31,18 @@ class _InState extends State<In> {
   }
 
   _panel() {
-    return Column(
+    return const Column(
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('abc', style: TextStyle(fontSize: 25)),
+            Text(
+              'welcome',
+              style: TextStyle(
+                  fontFamily: 'DancingScript',
+                  fontStyle: FontStyle.italic,
+                  fontSize: 22),
+            ),
           ],
         ),
       ],
